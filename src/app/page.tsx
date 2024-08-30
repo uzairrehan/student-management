@@ -1,15 +1,14 @@
 "use client";
 
-import EditStudent from "./EditStudent";
-import StudentList from "./StudentList";
+
+import StudentList from "../components/StudentList";
 
 
 
 export default function Home() {
   return (
     <>
-      {/* <StudentList /> */}
-      <EditStudent/>
+      <StudentList />
     </>
   );
 }

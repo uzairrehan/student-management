@@ -1,16 +1,9 @@
 "use client";
 
-type studentType = {
-    name: string;
-    fathername: string;
-    CNIC: string;
-    rollnum: string;
-    subjects: string[];
-    StudentClass: string;
-    fees: number;
-}
+import { studentType } from "@/types/types";
 
-let studentList = [{
+
+let studentList = [{    
     "name": "John Doe",
     "fathername": "Michael Doe",
     "CNIC": "12345-6789012-3",
@@ -249,8 +242,8 @@ export default function StudentList() {
                 </thead>
                 <tbody>
                     {
-                        studentList.map((student: studentType) => (
-                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        studentList.map((student:studentType) => (
+                            <tr key={student.CNIC + student.name} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     {student.name}
                                 </th>
@@ -272,6 +265,7 @@ export default function StudentList() {
                             </tr>
                         ))
                     }
+
 
 
                 </tbody>
