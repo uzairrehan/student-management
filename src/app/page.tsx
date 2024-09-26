@@ -1,7 +1,4 @@
 "use client";
-
-
-
 import EditStudent from "@/components/EditStudent";
 import NewStudent from "@/components/NewStudent";
 import StudentList from "@/components/StudentList";
@@ -218,9 +215,9 @@ export let studentList = [{
 export default function Home() {
   return (
     <>
-    {/* <NewStudent/> */}
+    <NewStudent/>
     <StudentList/>
-    {/* <EditStudent /> */}
+    <EditStudent />
 
     </>
   );

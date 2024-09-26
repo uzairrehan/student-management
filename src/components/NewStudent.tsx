@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function NewStudent() {
     return (
         <>
-              <h1 className="text-center p-2">Add New Student</h1>  
+        <h1 className="text-center p-2">Add New Student</h1>  
             <form className="p-5">
                 <div className="grid gap-6 mb-6 md:grid-cols-2">
                     <div>

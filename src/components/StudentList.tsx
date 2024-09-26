@@ -16,6 +16,9 @@ export default function StudentList() {
                 <thead className=" text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" className="px-6 py-3">
+                            Number
+                        </th>
+                        <th scope="col" className="px-6 py-3">
                             Student Name
                         </th>
                         <th scope="col" className="px-6 py-3">
@@ -34,14 +37,22 @@ export default function StudentList() {
                         <th scope="col" className="px-6 py-3">
                             Class
                         </th>
+                        <th scope="col" className="px-6 py-3">
+                            open
+                        </th>
+
                     </tr>
                 </thead>
                 <tbody>
-                     
+
+
                     {
-                        studentList.map((student:studentType, index) => (
-                              
-                            <tr  key={student.CNIC} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        studentList.map((student: studentType, index) => (
+
+                            <tr key={student.CNIC} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th className="px-6 py-4">
+                                    {index + 1}
+                                </th>
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     {student.name}
                                 </th>
@@ -61,18 +72,15 @@ export default function StudentList() {
                                     {student.StudentClass}
                                 </td>
                                 <Link href={student.rollnum} >
-                                <td className="px-6 py-4">
-                                <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Edit</button>
-                                </td>
+                                    <td className="px-6 py-4">
+                                        <button type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Open</button>
+                                    </td>
                                 </Link>
-                                <td>
-                                    {index}
-                                </td>
                             </tr>
                         )
-                        
+
                         )
-                        
+
                     }
 
 
